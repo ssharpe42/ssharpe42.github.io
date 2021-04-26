@@ -17,9 +17,9 @@ navbar-links:
   About Me: "aboutme"
   Projects: "projects"
   Blog: "sharpestats.com"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
+  # Resources:
+  #   - Beautiful Jekyll: "https://beautifuljekyll.com"
+  #   - Learn markdown: "https://www.markdowntutorial.com/"
   Resume: "Resume"
 
 # --- Logo --- #
