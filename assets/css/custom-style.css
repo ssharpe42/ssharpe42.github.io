@@ -1,0 +1,17 @@
+.image-wrapper {
+    text-align: center;
+
+
+}
+.image-caption {
+    color:  grey;
+    margin-top: 5px;
+    font-size: 80%
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 50%; */
+  }
