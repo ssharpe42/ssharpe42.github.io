@@ -1,7 +1,9 @@
 ---
 layout: page
 title: About me
-subtitle: 
+# subtitle: 
+show-avatar: true
+show-avatar1: false
 ---
 
 I currently reside in New York City where I am pursuing a Masters in Computer Science at Columbia University while working as a Data Scientist at Major League Baseball. I find creative ways to solve quantitative problems, answer questions, and build products

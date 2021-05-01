@@ -9,12 +9,12 @@ cover-img: /assets/img/2019-mlb-mvp-predictions-declining-focus-on-batting-avera
 thumbnail-img: /assets/img/2019-mlb-mvp-predictions-declining-focus-on-batting-average/thumbnail.png
 share-img: /assets/img/2019-mlb-mvp-predictions-declining-focus-on-batting-average/titlepic-800x350.png
 categories:
-  - Baseball
-  - Sports
+  - baseball
 tags:
   - MLB
   - MVP
 datatable: true
+show-avatar: false
 ---
 
 

@@ -8,8 +8,7 @@ cover-img: /assets/img/all-betts-are-on-yelich/betts-800x350.jpg
 thumbnail-img: /assets/img/all-betts-are-on-yelich/betts.jpg
 share-img: /assets/img/all-betts-are-on-yelich/betts.jpg
 categories:
-  - Baseball
-  - Sports
+  - baseball
 tags:
   - baseball
   - MVP

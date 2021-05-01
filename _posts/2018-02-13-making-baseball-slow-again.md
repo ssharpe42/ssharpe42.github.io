@@ -9,8 +9,7 @@ cover-img: /assets/img/making-baseball-slow-again/bulldurham.jpg
 thumbnail-img: /assets/img/making-baseball-slow-again/bulldurham-thumb.jpg
 share-img: /assets/img/making-baseball-slow-again/bulldurham.jpg
 categories:
-  - Baseball
-  - Sports
+  - baseball
 tags:
   - baseball
   - mixed models

@@ -97,6 +97,8 @@
   {{ page.thumbnail-img }}
   {%- elsif site.avatar -%}
   {{ site.avatar }}
+  {%- elsif site.avatar1 -%}
+  {{ site.avatar1 }}
   {% endif %}
   {%- endcapture -%}
   {%- assign img=img | strip -%}

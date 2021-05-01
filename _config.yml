@@ -14,9 +14,12 @@ author: Sam Sharpe
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  About Me: "aboutme"
+  Blog:
+    - Baseball: baseball
+    - About Nothing: /nothing
+    - Old Blog Site: "sharpestats.com"
   Projects: "projects"
-  Blog: "sharpestats.com"
+  About Me: "aboutme"
   # Resources:
   #   - Beautiful Jekyll: "https://beautifuljekyll.com"
   #   - Learn markdown: "https://www.markdowntutorial.com/"
@@ -27,6 +30,7 @@ navbar-links:
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
 avatar: "/assets/img/prof.jpg"
+avatar1: "/assets/img/sharpestatssquare.png"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
@@ -129,7 +133,7 @@ site-css:
 # --- Web Analytics Section --- #
 
 # Fill in your Google Analytics gtag.js ID to track your website using gtag
-#gtag: ""
+gtag: "G-LHS8E689MG"
 
 # Fill in your Google Analytics ID to track your website using Google Analytics
 #google_analytics: ""
