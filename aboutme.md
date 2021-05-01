@@ -6,7 +6,7 @@ show-avatar: true
 show-avatar1: false
 ---
 
-I am a Yankees fan living in Cambridge, MA with my wife. I currently work at Capital One as a Machine Learning Research Scientist coming up with new ways to incorporate recent ML research into financial applications. My background is in machine learning and operations research. 
+I am a Yankees fan living in Cambridge, MA with my Red Sox loving wife. I currently work at Capital One as a Machine Learning Research Scientist coming up with new ways to incorporate recent ML research into financial applications. My background is in machine learning and operations research. 
 
 As long as there is baseball data, I will never be bored.  
 
