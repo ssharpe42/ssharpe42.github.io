@@ -22,9 +22,11 @@ CVPR Language and Vision Workshop, 2019. [\[paper\]](https://arxiv.org/abs/1910.
 
 - [**Machine Learning for Temporal Data in Finance**](https://www.capitalone.com/tech/machine-learning/machine-learning-for-temporal-data-in-finance/) - How machine learning methods are evolving to address the complex temporal and sequential elements of consumer financial data
 
+- [**MLB Pitch Classification**](https://technology.mlblogs.com/mlb-pitch-classification-64a1e32ee079) - Deep dive into recent enhancements of MLB's pitch classification system
+
+
 - [**An Introduction to Expected Weighted On-Base Average (xwOBA)**](https://technology.mlblogs.com/an-introduction-to-expected-weighted-on-base-average-xwoba-29d6070ba52b) - Introduction to new baseball metrics derived from tracking data
 
-- [**MLB Pitch Classification**](https://technology.mlblogs.com/mlb-pitch-classification-64a1e32ee079) - Deep dive into recent enhancements of MLB's pitch classification system
 
 ## Blog Posts
 
