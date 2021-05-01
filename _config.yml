@@ -44,13 +44,13 @@ round-avatar: true
 # Select the social network links that you want to show in the footer.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "someone@example.com"
-  facebook: deanattali
-  github: daattali
-  twitter: daattali
-  patreon: DeanAttali
-  youtube: c/daattali
-#  medium: yourname
+  email: "ssharpe42y@gmail.com"
+  facebook: sam.sharpe.338
+  github: ssharpe42
+  twitter: SharpeWordz
+  # patreon: DeanAttali
+  # youtube: c/daattali
+  medium: sam.sharpe
 #  reddit: yourname
 #  linkedin: daattali
 #  xing: yourname
@@ -124,11 +124,13 @@ footer-link-col: "#404040"
 
 # For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
 site-css:
+  - "https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css"
   - "/assets/css/custom-style.css"
 
 # If you have common JavaScript files that should be included in every page, list them here
-# site-js:
-# - "/assets/js/datatable.js"
+site-js:
+  - "https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"
+  - "/assets/js/datatable.js"
 
 # --- Web Analytics Section --- #
 

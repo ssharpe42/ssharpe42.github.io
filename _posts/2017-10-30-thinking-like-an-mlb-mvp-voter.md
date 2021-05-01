@@ -125,12 +125,16 @@ What would an MVP article be without a prediction? Using the model geared to pre
 
 Here are the results from the model tuned to return the best top 3 and top 5 finisher order:
 
+|Rank|AL MVP|NL MVP|
+|:-: |:-:|:-:|
+|1|Jose Altuve|Charlie Blackmon|
+|2|Aaron Judge|Nolan Arenado|
+|3|Jose Ramirez|Giancarlo Stanton|
+|4|Mike Trout|Joey Votto|
+|5|Corey Kluber|Clayton Kershaw|
 
-<p style="text-align: center;">
-  <span style="font-size: 12pt;">[table id=9 /]</span>
-</p>
 
-It's apparent that I adjusted rate and counting stats for league and not (park effects)[https://www.fangraphs.com/guts.aspx?type=pf&season=2017&teamid=0&sort=2,d] given both Rockies[^6] place in the top 2. Certainly, if voters are sensitive to park effects, Stanton and Turner get big bumps and Rockies players likely don't have a chance. Larry Walker was the only Colorado player to win the MVP since their inception in 1993, but in a close 2017 race it might make the difference.
+It's apparent that I adjusted rate and counting stats for league and not [park effects](https://www.fangraphs.com/guts.aspx?type=pf&season=2017&teamid=0&sort=2,d) given both Rockies[^6] place in the top 2. Certainly, if voters are sensitive to park effects, Stanton and Turner get big bumps and Rockies players likely don't have a chance. Larry Walker was the only Colorado player to win the MVP since their inception in 1993, but in a close 2017 race it might make the difference.
 
 [^6]: Coors Field's mile high thin air tends to increase offensive production.
 

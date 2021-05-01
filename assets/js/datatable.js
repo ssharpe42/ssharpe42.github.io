@@ -1,10 +1,10 @@
 
 $(document).ready(function () {
-
-    $('table.display').DataTable({
-        paging: true,
-        stateSave: true,
-        searching: true
-    }
-    );
+    $('#datatable').DataTable({
+        searching: false,
+        select: true,
+        info: false,
+        paging: false
+    });
 });
+
