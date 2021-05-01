@@ -17,7 +17,7 @@ navbar-links:
   Blog:
     - Baseball: baseball
     - About Nothing: /nothing
-    - Old Blog Site: "sharpestats.com"
+    - Old Blog Site: "https://sharpestats.com"
   Projects: "projects"
   About Me: "aboutme"
   # Resources:
