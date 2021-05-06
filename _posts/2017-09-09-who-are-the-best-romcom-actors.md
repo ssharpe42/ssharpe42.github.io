@@ -5,7 +5,7 @@ layout: post
 permalink: /who-are-the-best-romcom-actors/
 cover-img: /assets/img/who-are-the-best-romcom-actors/romcom2.jpeg
 thumbnail-img: /assets/img/who-are-the-best-romcom-actors/romcom-thumbnail.png
-share-img: /assets/img/thinking-like-an-mlb-mvp-voter/romcom2.jpeg
+share-img: /assets/img/who-are-the-best-romcom-actors/romcom2.jpeg
 categories:
   - nothing
 tags:
