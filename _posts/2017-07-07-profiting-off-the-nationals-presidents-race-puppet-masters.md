@@ -1,12 +1,15 @@
 ---
-id: 290
 title: Profiting off the Nationals Presidents Race Puppet Masters
-date: 2017-07-30T15:23:55-05:00
+date: 2017-07-07T15:23:55-05:00
 author: Sam Sharpe
 permalink: /profiting-off-the-nationals-presidents-race-puppet-masters/
 cover-img: /assets/img/profiting-off-the-nationals-presidents/president_cover.jpg
-# thumbnail-img: /assets/img/who-are-the-best-romcom-actors/romcom-thumbnail.png
-# share-img: /assets/img/who-are-the-best-romcom-actors/romcom2.jpeg
+thumbnail-img: /assets/img/profiting-off-the-nationals-presidents/president_cover.jpg
+share-img: /assets/img/profiting-off-the-nationals-presidents/president_cover.jpg
+categories:
+  - nothing
+tags:
+  - decision trees
 ---
 
 Mid-inning entertainment takes many forms in the MLB from [The Freeze](https://www.youtube.com/watch?v=7asw5Vd8lIY) in Atlanta to the simple crab shuffle in Baltimore. These bouts of entertainment grab the attention of all fans regardless of age no matter how trivial or silly they may be. I always think to myself, who cares which subway train wins on the scoreboard at Yankee Stadium? Yet when the three trains start their engines on the jumbotron, I’m calling out my winning pick to my friends to secure that everlasting glory I somehow get from randomly picking a train and winning 1 in 3 times.
