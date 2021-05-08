@@ -15,9 +15,8 @@ author: Sam Sharpe
 
 navbar-links:
   Blog:
-    - Baseball: baseball
+    - Baseball: /baseball
     - About Nothing: /nothing
-    - Old Blog Site: "https://sharpestats.com"
   Projects: "projects"
   About Me: "aboutme"
   # Resources:
