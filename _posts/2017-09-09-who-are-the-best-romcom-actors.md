@@ -1,7 +1,6 @@
 ---
 title: Who Are the Best Romcom Actors?
 date: 2017-09-09T08:11:51-05:00
-layout: post
 permalink: /who-are-the-best-romcom-actors/
 cover-img: /assets/img/who-are-the-best-romcom-actors/romcom2.jpeg
 thumbnail-img: /assets/img/who-are-the-best-romcom-actors/romcom-thumbnail.png
@@ -74,15 +73,8 @@ Examining the top and bottom RC-PMs, the magnitude of individual ratings are ext
 
 I have included the full list of 49 actors and actresses with male, female, and overall RC-PM ratings. I agree with the ranking of Rachel McAdams and Sarah Jessica Parker, but there are certainly many in-between that could move up a couple spots. Let me know what you think. As always, if you are interested in the code behind RC-PM, you can find it [here](https://github.com/ssharpe42/RomComPlusMinus). 
 
-<!-- <script type="text/javascript" class="init">
 
-    $(document).ready(function () {
-        $('#example').DataTable();
-    });
-
-</script> -->
-
-<table id="datatable" class="display" >
+<table class="dt" style="width:80%">
 	<thead>
 		<tr>
 			<th>Actor/Actress</th>
@@ -391,4 +383,4 @@ I have included the full list of 49 actors and actresses with male, female, and 
   </tfoot>
 </table>
 
-
+ 
