@@ -8,9 +8,18 @@ carbonads: true
 
 ## Publications
 
-- *Visual natural language query auto-completion for estimating instance probabilities.* 
+- *Dynamic Customer Embeddings for Financial Service Applications.*
+Nima Chitsazan, Samuel Sharpe, Dwipam Katariya, Qianyu Cheng, Karthik Rajasethupathy.
+ICML 2021 Workshop on Representation Learning for Finance and e-Commerce Applications [\[paper\]](https://arxiv.org/abs/2106.11880)
+
+- *Latent-CF: A Simple Baseline for Reverse Counterfactual Explanations.*\\
+Rachana Balasubramanian, Sam Sharpe, Brian Barr, C. Bayan Bruss\\
+NeurIPS 2020 Workshop on Fair AI in Finance [\[paper\]](https://arxiv.org/abs/2012.09301)
+
+
+- *Visual natural language query auto-completion for estimating instance probabilities.*
 Samuel Sharpe, Jin Yan, Fan Wu, Iddo Drori. 
-CVPR Language and Vision Workshop, 2019. [\[paper\]](https://arxiv.org/abs/1910.04887) [\[github\]](https://github.com/ssharpe42/VNLQAC)
+CVPR 2019 Language and Vision Workshop [\[paper\]](https://arxiv.org/abs/1910.04887) [\[github\]](https://github.com/ssharpe42/VNLQAC)
 
 <!-- ## Course Projects
 
