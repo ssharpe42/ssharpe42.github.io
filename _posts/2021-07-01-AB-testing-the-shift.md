@@ -305,3 +305,7 @@ On average, shifting RHH is detrimental and there isn't even convincing evidence
 
 
 <img src="/assets/img/ab-testing-the-shift/rhh_shift_effectiveness.png" width="80%" and height="80%" class="center">
+
+
+
+_Photo Credit: Denis Poroy / Getty_
