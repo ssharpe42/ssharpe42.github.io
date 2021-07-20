@@ -65,7 +65,7 @@ I have a few concerns using PA with men on base to estimate shifting effects on 
 
 <div class="center_markdown_table"></div>
 
-|Method|RHH|LHH|Overall|
+|Method|LHH|RHH|Overall|
 |:-:|:-:|:-:|:-:|
 |Bases Empty (wOBA)|-0.045|0.030|-0.006|
 |All Base States (wOBA)|-0.022|0.034|0.003|
