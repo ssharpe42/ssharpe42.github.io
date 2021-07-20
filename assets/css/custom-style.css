@@ -24,3 +24,32 @@
 .dt-col {
     text-align: center;
 }
+
+div.center_markdown_table + table {
+    margin-left: auto;
+    margin-right: auto;
+}
+.center-table td, .center-table tr{
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+.imgcolumn {
+    float: left;
+    width: 33.33%;
+    padding: 1%;
+  }
+  
+/* Clear floats after image containers */
+.imgrow::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* .inrow {
+    float: left;
+    width:  309px;
+    height: 472px;
+} */
