@@ -18,6 +18,7 @@ datatable: true
 show-avatar: false
 ---
 
+
 Not often do we get the chance to witness live experiments mid-season on player performance, but that is pretty much what we have in the MLB sticky stuff crackdown. By intervening on one of the elements that we suspect contributes to pitching performance and keeping the rest constant, MLB has done some of the hard work for analysts. Though this isn't quite an A/B test on sticky stuff, but it's probably enough to come to some concrete league-wide conclusions. 
 
 When we analyze a treatment or a change we usually want to know the answer to a counterfactual question. For example, what would have happened to the strikeout rate for the rest of the season if there was no sticky stuff ban? Since we know what happens after the treatment is applied, this is basically another way of saying "what was the effect of applying a specific treatment or changing something?" Knowing the delta between the two scenarios is impossible, but techniques from causal analysis and experimentation are designed to help. 
