@@ -310,3 +310,5 @@ On average, shifting RHH is detrimental and there isn't even convincing evidence
 
 
 _Photo Credit: Denis Poroy / Getty_
+
+_Data Source: [baseballsavant.com](https://baseballsavant.com)_
