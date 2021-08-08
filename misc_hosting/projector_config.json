@@ -6,9 +6,9 @@
                 1000,
                 50
             ],
-            "tensorPath": "https://github.com/ssharpe42/ssharpe42.github.io/blob/blog/misc_hosting/metadata.tsv",
-            "metadataPath": "https://github.com/ssharpe42/ssharpe42.github.io/blob/blog/misc_hosting/tensors.tsv",
-            "bookmarksPath": "https://github.com/ssharpe42/ssharpe42.github.io/blob/blog/misc_hosting/bookmark.txt"
+            "tensorPath": "https://raw.githubusercontent.com/ssharpe42/ssharpe42.github.io/blog/misc_hosting/tensors.tsv",
+            "metadataPath": "https://raw.githubusercontent.com/ssharpe42/ssharpe42.github.io/blog/misc_hosting/metadata.tsv",
+            "bookmarksPath": "https://raw.githubusercontent.com/ssharpe42/ssharpe42.github.io/blog/misc_hosting/bookmark.txt"
         }
     ]
 }
