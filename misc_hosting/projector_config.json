@@ -1,0 +1,14 @@
+{
+    "embeddings": [
+        {
+            "tensorName": "My tensor",
+            "tensorShape": [
+                1000,
+                50
+            ],
+            "tensorPath": "https://raw.githubusercontent.com/ssharpe42/ssharpe42.github.io/61d67a46f3825ecb6be84c3d7d3e5afcfdfc0ca6/misc_hosting/metadata.tsv",
+            "metadataPath": "https://github.com/ssharpe42/ssharpe42.github.io/blob/61d67a46f3825ecb6be84c3d7d3e5afcfdfc0ca6/misc_hosting/tensors.tsv",
+            "bookmarksPath": "https://github.com/ssharpe42/ssharpe42.github.io/blob/61d67a46f3825ecb6be84c3d7d3e5afcfdfc0ca6/misc_hosting/bookmark.txt"
+        }
+    ]
+}
