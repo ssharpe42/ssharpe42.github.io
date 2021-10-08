@@ -157,7 +157,7 @@ Compared to WOWY the ATT for bases empty in 2021 indicates similar shift effects
 
 <div class="center_markdown_table"></div>
 
-|Method|RHH|LHH|Overall|
+|Method|LHH|RHH|Overall|
 |:-:|:-:|:-:|:-:|
 |Bases Empty (wOBA)|-0.018|0.031|0.000|
 |All Base States (wOBA)|-0.012|0.026|0.001|
