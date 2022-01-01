@@ -29,6 +29,8 @@ CVPR 2019 Language and Vision Workshop [\[paper\]](https://arxiv.org/abs/1910.04
 
 ## Professional Articles
 
+- [**Dynamic Customer Embeddings & Understanding Customer Intent**](https://www.capitalone.com/tech/machine-learning/dynamic-customer-embeddings-sequential-recommendation-representation-learning/) - How sequential recommendation and representation learning can be leveraged to model customer behavior
+
 - [**Machine Learning for Temporal Data in Finance**](https://www.capitalone.com/tech/machine-learning/machine-learning-for-temporal-data-in-finance/) - How machine learning methods are evolving to address the complex temporal and sequential elements of consumer financial data
 
 - [**MLB Pitch Classification**](https://technology.mlblogs.com/mlb-pitch-classification-64a1e32ee079) - Deep dive into recent enhancements of MLB's pitch classification system
