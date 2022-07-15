@@ -9,7 +9,7 @@ carbonads: true
 ## Publications
 
 - *BASED-XAI: Breaking Ablation Studies Down for Explainable Artificial Intelligence.*
-Isha Hameed, Samuel Sharpe, Daniel Barcklow, Justin Au-Yeung, Sahil Verma, Jocelyn Huang, Brian Barr, C. Bayan Bruss
+Isha Hameed, Samuel Sharpe, Daniel Barcklow, Justin Au-Yeung, Sahil Verma, Jocelyn Huang, Brian Barr, C. Bayan Bruss.
 KDD 2022 Workshop on Machine Learning in Finance [\[paper\]](https://arxiv.org/abs/2207.05566)
 
 - *Dynamic Customer Embeddings for Financial Service Applications.*
@@ -46,6 +46,7 @@ CVPR 2019 Language and Vision Workshop [\[paper\]](https://arxiv.org/abs/1910.04
 
 
 ## Blog Posts
+- **[A/B Testing the Shift](https://sharpestats.com/ab-testing-the-shift/)** - Analyzing the effectivness of the shift through propensity scores. 
 
 - **MVP Voter Model** [\[github\]](https://github.com/ssharpe42/MLB_MVPVoting) - MVP vote prediction model using fused 
 lasso formulated with linear programming objective and constraints
