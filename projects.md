@@ -8,6 +8,10 @@ carbonads: true
 
 ## Publications
 
+- *BASED-XAI: Breaking Ablation Studies Down for Explainable Artificial Intelligence.*
+Isha Hameed, Samuel Sharpe, Daniel Barcklow, Justin Au-Yeung, Sahil Verma, Jocelyn Huang, Brian Barr, C. Bayan Bruss
+KDD 2022 Workshop on Machine Learning in Finance [\[paper\]](https://arxiv.org/abs/2207.05566)
+
 - *Dynamic Customer Embeddings for Financial Service Applications.*
 Nima Chitsazan, Samuel Sharpe, Dwipam Katariya, Qianyu Cheng, Karthik Rajasethupathy.
 ICML 2021 Workshop on Representation Learning for Finance and e-Commerce Applications [\[paper\]](https://arxiv.org/abs/2106.11880)
@@ -28,6 +32,8 @@ CVPR 2019 Language and Vision Workshop [\[paper\]](https://arxiv.org/abs/1910.04
 -  **Random-Contact Memory-Decay Independent Cascades** [\[paper\]](https://ssharpe42.github.io/RCMD-IC) - Proposal of new cascade model of influence over social networks. -->
 
 ## Professional Articles
+
+
 
 - [**Dynamic Customer Embeddings & Understanding Customer Intent**](https://www.capitalone.com/tech/machine-learning/dynamic-customer-embeddings-sequential-recommendation-representation-learning/) - How sequential recommendation and representation learning can be leveraged to model customer behavior
 
