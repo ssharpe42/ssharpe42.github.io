@@ -491,8 +491,8 @@ footer .footer-custom-content {
 .post-preview .post-image {
   float: right;
   margin-left: 0.625rem;
-  height: 12rem;
-  width: 12rem;
+  height: 18rem;
+  width: 18rem;
 }
 .post-preview .post-image {
   filter: grayscale(40%);
