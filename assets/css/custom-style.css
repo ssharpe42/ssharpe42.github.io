@@ -1,10 +1,10 @@
 .image-wrapper {
     text-align: center;
 
-
 }
+
 .image-caption {
-    color:  grey;
+    color: grey;
     margin-top: 5px;
     font-size: 80%
 }
@@ -14,9 +14,9 @@
     margin-left: auto;
     margin-right: auto;
     /* width: 50%; */
-  }
+}
 
-.center-table{
+.center-table {
     margin-left: auto;
     margin-right: auto;
 }
@@ -25,11 +25,13 @@
     text-align: center;
 }
 
-div.center_markdown_table + table {
+div.center_markdown_table+table {
     margin-left: auto;
     margin-right: auto;
 }
-.center-table td, .center-table tr{
+
+.center-table td,
+.center-table tr {
     text-align: center;
     vertical-align: middle;
 }
@@ -39,8 +41,8 @@ div.center_markdown_table + table {
     float: left;
     width: 33.33%;
     padding: 1%;
-  }
-  
+}
+
 /* Clear floats after image containers */
 .imgrow::after {
     content: "";
