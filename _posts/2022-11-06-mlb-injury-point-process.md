@@ -23,15 +23,13 @@ show-avatar: false
 * TOC
 {:toc}
  
-### Introduction
- 
+<!--more-->
 Anyone can admit that baseball is hard to predict[^1], probably one of the reasons it can be so exciting. I've definitely done my share of modeling game and at-bat outcomes, but I wanted to pose a different challenge for this post: predicting injury risk.
  
 [^1]: [How often does the best team win? A unified approach to understanding randomness in north american sport.](https://arxiv.org/pdf/1701.05976.pdf)
  
- 
 Injury risk is an important element of season long unpredictability. A bunch of injury research focuses mostly on pitcher health, looking at pitch load, movement, even video analysis. I'm sure teams also have their own complex systems for modeling and monitoring player health.
- 
+
 I'm going to keep the inputs (relatively) simple and limit the problem to predicting future injuries using **only** past injuries. Yes, it makes this problem a bit harder by not having any in game information such as pitch load or changes in pitch/exit velocity, but it also allows me to selfishly use some fun techniques and give you an intro to an interesting area of statistics. 
 
 <!-- Most importantly, cleaning all of the injury data was enough for a project in itself! -->
@@ -39,8 +37,8 @@ I'm going to keep the inputs (relatively) simple and limit the problem to predic
 My hypothesis is that more injuries in the past may cause or increase the likelihood of injuries (or surgical interventions) in the future. For example, frequent forearm or elbow issues could end up in tommy john surgery or muscle/ligament tears could cause players to overcompensate and injure other related areas. Furthermore, I expect injuries in related areas of the body are more likely to increase each other's future injury risk.
  
 A statistical concept that is particularly well suited to these assumptions is the self-exciting point process (SEPP) or Hawkes process (HP). Using a HP, we can answer questions like: Are injuries to specific body parts self-exciting -- for example, do elbow injuries increase the likelihood of elbow injuries much more than other body parts? Does this differ in pitchers vs batters? How do day-to-day injuries influence future injury risk? How do we put this information together to gauge injury risk at any point in time?
- 
- 
+
+
 ### Temporal Point Processes
  
 To understand how HPs can help to answer this I'll first give some background on temporal point processes and how we might be able to use them. If you are familiar or just want to skip the math, go [here](#data).
@@ -261,6 +259,9 @@ For more details, check out the code on [github](https://github.com/ssharpe42/ml
  
 _Data Sources: [Baseball Savant](https://baseballsavant.com), [Pro Sports](https://www.prosportstransactions.com/), MLB Stats API_
  
+<style>
+.big-img {opacity: 0.5;}
+</style>
  
  
 <!--
