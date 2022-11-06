@@ -23,7 +23,8 @@ show-avatar: false
 * TOC
 {:toc}
  
-<!--more-->
+### Introduction
+
 Anyone can admit that baseball is hard to predict[^1], probably one of the reasons it can be so exciting. I've definitely done my share of modeling game and at-bat outcomes, but I wanted to pose a different challenge for this post: predicting injury risk.
  
 [^1]: [How often does the best team win? A unified approach to understanding randomness in north american sport.](https://arxiv.org/pdf/1701.05976.pdf)
