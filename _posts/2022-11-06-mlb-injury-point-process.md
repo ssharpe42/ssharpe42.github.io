@@ -1,13 +1,14 @@
 ---
-title: "MLB Injuries: How (Self-)Exciting?"
+title: "Injuries in Baseball: How (Self-)Exciting?"
 date: 2022-11-06T11:52:19-05:00
 author: Sam Sharpe
 layout: post
 permalink: /mlb-injury-point-process/
  
-cover-img: /assets/img/mlb-injury-point-process/cover.png
-thumbnail-img: /assets/img/mlb-injury-point-process/cover.png
+cover-img: /assets/img/mlb-injury-point-process/adames_injury.jpeg
+thumbnail-img: /assets/img/mlb-injury-point-process/adames_injury.jpeg
 share-img: /assets/img/mlb-injury-point-process/cover.png
+share-description: Modeling MLB player injury risk with temporal point processes. 
 categories:
  - baseball
 tags:
@@ -248,7 +249,10 @@ TPPs are useful tools for learnable processes that evolve over time. Though I ha
  
 For more details, check out the code on [github](https://github.com/ssharpe42/mlb-injury).
  
- 
+_Data Sources: [Baseball Savant](https://baseballsavant.com), [Pro Sports](https://www.prosportstransactions.com/), MLB Stats API_
+
+_Photo Credit: Mark Brown / Getty_
+
 ### References & Resources
  
 1. Rodriguez, Manuel and Valera, Isabel. 2018. Learning with Point Processes (ICML 2018 Tutorial): Part [1](https://learning.mpi-sws.org/tpp-icml18/seminar-icml18-part1.pdf),[2](https://learning.mpi-sws.org/tpp-icml18/seminar-icml18-part2.pdf),[3](https://learning.mpi-sws.org/tpp-icml18/seminar-icml18-part3.pdf)
@@ -258,11 +262,11 @@ For more details, check out the code on [github](https://github.com/ssharpe42/ml
 3. Mei, Hongyuan and Eisner, Jason. 2017. The Neural Hawkes Process: A Neurally Self-Modulating Multivariate Point Process. https://arxiv.org/abs/1612.09328.
  
  
-_Data Sources: [Baseball Savant](https://baseballsavant.com), [Pro Sports](https://www.prosportstransactions.com/), MLB Stats API_
- 
+
+<!-- 
 <style>
 .big-img {opacity: 0.5;}
-</style>
+</style> -->
  
  
 <!--
