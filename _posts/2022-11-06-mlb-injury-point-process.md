@@ -108,7 +108,7 @@ where $\mu$ is some baseline or average rate of events, $\alpha$ is the degree t
            alt="Closely clustered events with decaying intensity in-between each event."
            caption="Self exciting point process where the intensity of events depends on the process history. (Rodriguez & Valera, 2018)." %}
  
-This type of process and its assumptions can lead to clustering of events as they feed off of one anothers excitement and the intensity at time $t$ rises. We can sometimes see this behavior where injuries compound and cluster together. Buxton and Kershaw's injury timelines, for example, have similar short periods of successive injuries.
+This type of process and its assumptions can lead to clustering of events as they feed off of each other's excitement and the intensity at time $t$ rises. We can sometimes see this behavior where injuries compound and cluster together. Buxton and Kershaw's injury timelines, for example, have similar short periods of successive injuries.
  
 {% include image.html
            img="/assets/img/mlb-injury-point-process/byron-buxton-injury-events.png"
@@ -263,11 +263,11 @@ _Photo Credit: Mark Brown / Getty_
  
 1. Rodriguez, Manuel and Valera, Isabel. 2018. Learning with Point Processes (ICML 2018 Tutorial): Part [1](https://learning.mpi-sws.org/tpp-icml18/seminar-icml18-part1.pdf),[2](https://learning.mpi-sws.org/tpp-icml18/seminar-icml18-part2.pdf),[3](https://learning.mpi-sws.org/tpp-icml18/seminar-icml18-part3.pdf)
  
-2. Rizoiu et al. 2017. A tutorial on Hawkes Processes for events in social media. https://arxiv.org/abs/1708.06401. 
+2. Rizoiu et al. 2017. A tutorial on Hawkes Processes for events in social media. [https://arxiv.org/abs/1708.06401](https://arxiv.org/abs/1708.06401). 
  
-3. Mei, Hongyuan and Eisner, Jason. 2017. The Neural Hawkes Process: A Neurally Self-Modulating Multivariate Point Process. https://arxiv.org/abs/1612.09328.
+3. Mei, Hongyuan and Eisner, Jason. 2017. The Neural Hawkes Process: A Neurally Self-Modulating Multivariate Point Process. [https://arxiv.org/abs/1612.09328](https://arxiv.org/abs/1612.09328).
  
- 
+### Footnotes
 
 <!-- 
 <style>
