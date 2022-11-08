@@ -5,9 +5,9 @@ author: Sam Sharpe
 layout: post
 permalink: /mlb-injury-point-process/
  
-cover-img: /assets/img/mlb-injury-point-process/adames_injury.avif
-thumbnail-img: /assets/img/mlb-injury-point-process/adames_injury.avif
-share-img: /assets/img/mlb-injury-point-process/cover.avif
+cover-img: /assets/img/mlb-injury-point-process/adames_injury.jpeg
+thumbnail-img: /assets/img/mlb-injury-point-process/adames_injury.jpeg
+share-img: /assets/img/mlb-injury-point-process/cover.png
 share-description: Modeling MLB player injury risk with temporal point processes. 
 categories:
  - baseball
@@ -189,7 +189,7 @@ We can see some large excitement off the diagonal that adhere to intuition such 
 We can dig even deeper by building separate models for batters and pitchers. These breakdowns can illustrate differences in batter and pitcher injury excitement. For example, hip and head/neck injuries have a larger effect on future torso and shoulder injuries for pitchers while higher alphas on the diagonal suggest batters tend to aggravate their ankles, backs, legs, and wrists more often.
  
 <a name="location-excitement-batter-vs-pitcher"></a>
-<img src="/assets/img/mlb-injury-point-process/batter-vs-pitcher.avif" width="100%" and height="100%" class="center">
+<img src="/assets/img/mlb-injury-point-process/batter-vs-pitcher.png" width="100%" and height="100%" class="center">
  
 We can also leverage information from the decay kernel for more insights on how injuries raise future injury risk. In the plot below we can see how pitchers' injuries lead to varying future elbow injury risk.
  
