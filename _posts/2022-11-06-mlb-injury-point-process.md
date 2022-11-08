@@ -5,9 +5,9 @@ author: Sam Sharpe
 layout: post
 permalink: /mlb-injury-point-process/
  
-cover-img: /assets/img/mlb-injury-point-process/adames_injury.jpeg
-thumbnail-img: /assets/img/mlb-injury-point-process/adames_injury.jpeg
-share-img: /assets/img/mlb-injury-point-process/cover.png
+cover-img: /assets/img/mlb-injury-point-process/adames_injury.avif
+thumbnail-img: /assets/img/mlb-injury-point-process/adames_injury.avif
+share-img: /assets/img/mlb-injury-point-process/cover.avif
 share-description: Modeling MLB player injury risk with temporal point processes. 
 categories:
  - baseball
@@ -26,6 +26,7 @@ show-avatar: false
  
 ### Introduction
 
+<!--more-->
 Anyone can admit that baseball is hard to predict[^1], probably one of the reasons it can be so exciting. I've definitely done my share of modeling game and at-bat outcomes, but I wanted to pose a different challenge for this post: predicting injury risk.
  
 [^1]: [How often does the best team win? A unified approach to understanding randomness in north american sport.](https://arxiv.org/pdf/1701.05976.pdf)
@@ -75,6 +76,7 @@ Often though, the real world is more complex than these simplifying assumptions.
            img="/assets/img/mlb-injury-point-process/homogeneous.png"
            width = "80%"
            height = "80%"
+           alt="Graph of three sparse events occuring in a constant pattern with a flat constant intensity."
            caption="Homogeneous poisson process has an intensity $\lambda(t)$ which is always constant (Rodriguez & Valera, 2018)." %}
  
 Intensity is often a continuous function and fluctuates with time as modeled by an _inhomogeneous_ poisson process. For example, customers' rate of arriving at a store probably depends on the time of day as well as the day of the week.
@@ -83,6 +85,7 @@ Intensity is often a continuous function and fluctuates with time as modeled by 
            img="/assets/img/mlb-injury-point-process/inhomogeneous.png"
            width = "80%"
            height = "80%"
+           alt="Graph of clustered events occuring simultaneously with two humps in intensity."
            caption="Inhomogeneous poisson process has an intensity $\lambda(t)$ which varies over time (Rodriguez & Valera, 2018)." %}
  
 #### Self-Exciting Temporal Point Process
@@ -102,6 +105,7 @@ where $\mu$ is some baseline or average rate of events, $\alpha$ is the degree t
            img="/assets/img/mlb-injury-point-process/self-exciting-example.png"
            width = "80%"
            height = "80%"
+           alt="Closely clustered events with decaying intensity in-between each event."
            caption="Self exciting point process where the intensity of events depends on the process history. (Rodriguez & Valera, 2018)." %}
  
 This type of process and its assumptions can lead to clustering of events as they feed off of one anothers excitement and the intensity at time $t$ rises. We can sometimes see this behavior where injuries compound and cluster together. Buxton and Kershaw's injury timelines, for example, have similar short periods of successive injuries.
@@ -109,12 +113,14 @@ This type of process and its assumptions can lead to clustering of events as the
 {% include image.html
            img="/assets/img/mlb-injury-point-process/byron-buxton-injury-events.png"
            width = "80%"
-           height = "80%" %}
+           height = "80%"
+           alt = "Clustered events shown with lollipop like graphs. " %}
  
 {% include image.html
            img="/assets/img/mlb-injury-point-process/clayton-kershaw-injury-events.png"
            width = "80%"
-           height = "80%" %}
+           height = "80%" 
+           alt = "Clustered events shown with lollipop like graphs. "%}
  
 #### Modeling Multiple Event Types
  
@@ -166,19 +172,19 @@ We can train models with any kind of event encoding. For example, we could use a
 First, by inspecting the excitement (alpha) matrices of the location only model, we can see a really clear self-excitement trend. Previous injuries tend to drastically increase the intensity of injuries in the same location.
  
 <a name="location-excitement"></a>
-<img src="/assets/img/mlb-injury-point-process/all_players-excitement-both.png" width="100%" and height="100%" class="center">
+<img src="/assets/img/mlb-injury-point-process/all_players-excitement-both.png" width="100%" and height="100%" alt="Heat map with more dark red along the diagonal where body parts match." class="center">
  
 If we break down the model into separate events for IL and DTD injuries, we see that DTD injuries tend to drive a lot of the self-excitement.
  
 <a name="location-excitement-dtd"></a>
-<img src="/assets/img/mlb-injury-point-process/all_players-excitement-dtd.png" width="100%" and height="100%" class="center">
+<img src="/assets/img/mlb-injury-point-process/all_players-excitement-dtd.png" width="100%" and height="100%" alt="Heat map with more dark red along the diagonal where body parts match." class="center">
  
 IL stint self-excitement is a bit more muted relative to other alphas. Generally, this makes sense since IL stints can range from 10 days to a whole season for a surgery meaning there can be a large variance in the amount of recovery and therefore future injury risk. DTD injuries are probably more correlated with nagging problems that might end in an IL stint where layers might be day to day with that same injury multiple times.
  
 We can see some large excitement off the diagonal that adhere to intuition such as hip, head/neck injuries preceding torso issues or elbow and wrist injuries preceding other arm injuries. Though there are a handful of others that may be more confusing and likely coincidental, like wrist injuries preceding other leg injuries.
  
 <a name="location-excitement-il"></a>
-<img src="/assets/img/mlb-injury-point-process/all_players-excitement-il.png" width="100%" and height="100%" class="center">
+<img src="/assets/img/mlb-injury-point-process/all_players-excitement-il.png" width="100%" and height="100%" alt="Heat map with red along the diagonal but also some scattered sparse excitement off the diagonal." class="center">
  
 We can dig even deeper by building separate models for batters and pitchers. These breakdowns can illustrate differences in batter and pitcher injury excitement. For example, hip and head/neck injuries have a larger effect on future torso and shoulder injuries for pitchers while higher alphas on the diagonal suggest batters tend to aggravate their ankles, backs, legs, and wrists more often.
  
@@ -188,7 +194,7 @@ We can dig even deeper by building separate models for batters and pitchers. The
 We can also leverage information from the decay kernel for more insights on how injuries raise future injury risk. In the plot below we can see how pitchers' injuries lead to varying future elbow injury risk.
  
 <a name="kernel"></a>
-<img src="/assets/img/mlb-injury-point-process/pitcher-elbow-kernel.png" width="100%" and height="100%" class="center">
+<img src="/assets/img/mlb-injury-point-process/pitcher-elbow-kernel.png" width="100%" and height="100%" alt="Varied decay and height of lines signifying very different effects of injuries on future elboy injury risk." class="center">
  
 The blue line illustrates the high self-excitement of DTD injuries, initially having a very high risk, but decaying quickly. DTD elbow and IL elbow injuries have the longest persistent effect on future elbow related IL risk (red and green line respectively). Other arm injuries have little effect and risk of elbow IL stints immediately revert to the long term average after a foot injury.
  
@@ -204,7 +210,7 @@ To generate predictions, I use a two step process: I first estimate the time of 
 The injury distribution is fairly balanced. The model should be able to surpass a 10% accuracy naive baseline predicting hamstring injuries every time.
  
 <a name="injury-dist"></a>
-<img src="/assets/img/mlb-injury-point-process/injury-dist.png" width="80%" and height="80%" class="center">
+<img src="/assets/img/mlb-injury-point-process/injury-dist.png" width="80%" and height="80%" class="center" alt="Slowly decreasing bar graph.">
  
 The TPP model predicts the injury correctly 18.5% of the time out of the 15 different categories. The correct injury also falls in the top 2 and top 3 predictions 30% and 37% of the time respectively. The TPP IL/DTD model (broken down into IL/DTD) recalls the actual injury 14% of time with double the possible categories.
  

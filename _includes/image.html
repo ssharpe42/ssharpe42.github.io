@@ -2,10 +2,10 @@
 <div class="image-wrapper">
     {% if include.url %}
     <a href="{{ include.url }}" title="{{ include.title }}" target="_blank" width="{{ include.width }}" and
-        height="{{ include.height }}">
+        height="{{ include.height }}" alt="{{ include.alt }}">
         {% endif %}
         <img src="{{ site.url }}/{{ include.img }}" alt="{{ include.title }}" width="{{ include.width }}" and
-            height="{{ include.height }}" />
+            height="{{ include.height }}" alt="{{ include.alt }}"/>
         {% if include.url %}
     </a>
     {% endif %}

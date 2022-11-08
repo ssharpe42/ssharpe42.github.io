@@ -17,6 +17,9 @@
   {{ page.share-description | strip_html | xml_escape }}
   {%- elsif page.subtitle -%}
   {{ page.subtitle | strip_html | xml_escape }}
+  {%- elsif page.content contains site.excerpt_separator -%}
+  {%- assign excerpt_length = site.excerpt_length | default: 50 -%}
+  {{ page.content | split: site.excerpt_separator | last | strip_html | xml_escape | truncatewords: excerpt_length | strip }}
   {%- else -%}
   {%- assign excerpt_length = site.excerpt_length | default: 50 -%}
   {{ page.content | strip_html | xml_escape | truncatewords: excerpt_length | strip }}
