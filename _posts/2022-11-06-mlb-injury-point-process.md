@@ -22,9 +22,6 @@ mathjax: true
 show-avatar: false
 ---
  
-* TOC
-{:toc}
- 
 ### Introduction
 
 <!--more-->

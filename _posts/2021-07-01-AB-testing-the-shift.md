@@ -17,6 +17,7 @@ tags:
 datatable: true
 mathjax: true
 show-avatar: false
+card-stats: ["vs LHH | −56 pts wOBA", "vs RHH | +38"]
 ---
 
 
