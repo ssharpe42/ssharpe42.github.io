@@ -14,6 +14,7 @@ tags:
   - linear programming
   - MVP
   - sabermetrics
+mathjax: true
 ---
 
 

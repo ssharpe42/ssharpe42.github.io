@@ -10,6 +10,7 @@ categories:
   - nothing
 tags:
   - decision trees
+mathjax: true
 ---
 
 Mid-inning entertainment takes many forms in the MLB from [The Freeze](https://www.youtube.com/watch?v=7asw5Vd8lIY) in Atlanta to the simple crab shuffle in Baltimore. These bouts of entertainment grab the attention of all fans regardless of age no matter how trivial or silly they may be. I always think to myself, who cares which subway train wins on the scoreboard at Yankee Stadium? Yet when the three trains start their engines on the jumbotron, I’m calling out my winning pick to my friends to secure that everlasting glory I somehow get from randomly picking a train and winning 1 in 3 times.
@@ -126,17 +127,6 @@ To make sense of the tree above, treat each node as a question or a condition mo
 
 [^5]: Since the condition has "= NO" the answer is yes if the condition is true (i.e., Teddy has not won yet)
 
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-        inlineMath: [['$','$']], 
-        processEscapes: false
-      }
-    });
-  </script>
-
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 
 One measly percent might not be worth all this effort. And what is it for? Bragging rights? Lets make it more interesting with some real payouts. Yes, I’m talking about betting on the Presidents race. It won’t be long before Vegas makes the lines, so let’s get ahead of them and make our own rules. Creating payouts for different bets won’t be too hard. It just needs to be a betting structure that doesn’t reward putting all your money on Abe, the lazy strategy. Lets assume that for each president the payout is $\frac{1}{P(Win)}$ if you guess correctly and $\frac{-1}{1-P(Win)}$ if you guess the same president incorrectly. This betting structure ensures that if you continue to only bet on one president, and he continues to win roughly the same proportion of races, your profit will be approximately 0. In this case, correctly guessing Abe results in a 2.82 dollar reward while guessing Abe incorrectly deducts 1.55. On the other hand, guessing Teddy correctly results in a much higher compensation of 9.82 but a loss of only 1.11 if Teddy is the incorrect choice.

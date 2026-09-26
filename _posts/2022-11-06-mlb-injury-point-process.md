@@ -18,6 +18,7 @@ tags:
  - hawkes process
  - poisson
 datatable: true
+mathjax: true
 show-avatar: false
 ---
  

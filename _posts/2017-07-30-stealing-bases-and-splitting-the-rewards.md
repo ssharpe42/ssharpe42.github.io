@@ -14,6 +14,7 @@ tags:
   - R
   - sabermetrics
   - stolen base
+datatable: true
 ---
 
 The contextual revolution (don't really know if that's a thing, but it sounds official) emerged in the MLB the past few years, attempting to control for more situational effects than current sabermetric driven baseball stats. These models build upon Bill James's work, Tom Tango's all-important [linear weights](http://www.fangraphs.com/library/offense/woba/), and similar metrics that account for league, [park](http://www.fangraphs.com/library/principles/park-factors/), and positional production.

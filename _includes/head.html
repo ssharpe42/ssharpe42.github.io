@@ -2,6 +2,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <!-- Resource hints for CDN domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://stackpath.bootstrapcdn.com">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://stackpath.bootstrapcdn.com">
+
   {% capture title %}
   {%- if page.share-title -%}
   {{ page.share-title | strip_html | xml_escape }}
@@ -153,33 +163,21 @@
   {% endif %}
 
 
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-        inlineMath: [['$','$']], 
-        processEscapes: true
+  {% if page.mathjax %}
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true,
+        tags: 'ams'
       }
-    });
+    };
   </script>
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-    type="text/javascript"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  {% endif %}
 
-  <!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
-  <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.1.1/katex.min.js"></script> -->
-  <!-- Parse the Latex divs with Katex
-  <script type="text/javascript">
-    $("script[type='math/tex']").replaceWith(
-      function () {
-        var tex = $(this).text();
-        return katex.renderToString(tex, { displayMode: false });
-      });
-
-    $("script[type='math/tex; mode=display']").replaceWith(
-      function () {
-        var tex = $(this).text();
-        return katex.renderToString(tex.replace(/%.*/g, ''), { displayMode: true });
-      });
-  </script> -->
+  {% if page.datatable %}
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+  {% endif %}
 </head>

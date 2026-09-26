@@ -36,3 +36,8 @@
     <script src="{{ js | relative_url }}"></script>
   {% endfor %}
 {% endif %}
+
+{% if page.datatable %}
+  <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+  <script src="{{ '/assets/js/datatable.js' | relative_url }}"></script>
+{% endif %}

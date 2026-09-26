@@ -13,6 +13,7 @@ tags:
   - plus-minus
   - regularization
   - romcom
+datatable: true
 ---
 I'm going to admit it up front. I don't hate romantic comedies. Love Actually could be one of the best movies ever made. Whether it's the storyline, the writing, the directing, the music, or the acting, sometimes a good romantic comedy is just the thing we need on cold winter night by the fire. I'm here to talk about one sliver of the formula: the actors and actresses. We all know the group of actors that show up in romcom after romcom. Is that the reason we keep coming back? The adept acting of Meryl Streep? The irresistible good looks of Bradley Cooper? Whatever the reasons are, I haven't figured them out. While I can't tell you _why_ we like a specific actor, I dug deep into the data to prepare myself to tell you which actors we value the most (and the least).
 

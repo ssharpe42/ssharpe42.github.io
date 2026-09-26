@@ -4,6 +4,27 @@ layout: base
 
 {% include header.html type="post" %}
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ page.title | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  {% if page.last-updated %}"dateModified": "{{ page.last-updated | date_to_xmlschema }}",{% else %}"dateModified": "{{ page.date | date_to_xmlschema }}",{% endif %}
+  "author": {
+    "@type": "Person",
+    "name": {{ site.author | jsonify }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.title | jsonify }}
+  },
+  "description": {{ page.subtitle | default: page.excerpt | strip_html | jsonify }},
+  "url": "{{ page.url | absolute_url }}"{% if page.cover-img %},
+  "image": "{{ page.cover-img | absolute_url }}"{% endif %}
+}
+</script>
+
 <div class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
   <div class="row">
     <div class="{% if page.full-width %} col {% else %} col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}">

@@ -5,7 +5,7 @@ author: Sam Sharpe
 layout: post
 permalink: /ab-testing-the-shift/
 
-cover-img: /assets/img/ab-testing-the-shift/shift_cover.png
+cover-img: /assets/img/ab-testing-the-shift/shift_cover.jpeg
 thumbnail-img: /assets/img/ab-testing-the-shift/shift_cover.jpeg
 share-img: /assets/img/ab-testing-the-shift/shift_cover.jpeg
 categories:
@@ -15,6 +15,7 @@ tags:
   - shift
   - causal
 datatable: true
+mathjax: true
 show-avatar: false
 ---
 
@@ -32,7 +33,7 @@ I'll leave sticky stuff analysis to someone else and focus my efforts on a long 
 There has been plenty of great analysis that looks into interesting angles of the shift such as Justin Choi's articles on the [Padres](https://blogs.fangraphs.com/no-team-is-shifting-like-the-padres/) and [Dodgers](https://blogs.fangraphs.com/the-dodgers-might-have-a-shifting-strategy-of-their-own/). Sam Miller wrote a good summary of past work in his [article](https://www.espn.com/mlb/story/_/id/24265798/mlb-myth-buster-shift-curbing-runs-creating-them) at ESPN and more recently, so did [Ben Lindbergh](https://www.theringer.com/2020/10/21/21526283/defensive-shift-world-series-los-angeles-dodgers-will-smith-tampa-bay-rays). Some of the past analysis of shifts ignores the confounding factors embedded in the selection of shifted players. For example, if we just compared [wOBA](https://library.fangraphs.com/offense/woba/) during the shift vs normal alignment, this makes the assumption that we expect the two groups to have the same wOBA without the shift. As we can see in this graph below, there is a clear influence of skill or projected wOBA of batters on the decision by teams to shift or not. 
 
 <a name="shiftbywoba"></a>
-<img src="/assets/img/ab-testing-the-shift/shift_by_projwoba.png" width="80%" and height="80%" class="center">
+<img src="/assets/img/ab-testing-the-shift/shift_by_projwoba.png" width="80%" height="80%" class="center" alt="Bar chart showing shift rate by projected wOBA for left-handed and right-handed hitters">
 
 
 Russell Carleton [adjusts](https://www.baseballprospectus.com/news/article/40088/baseball-therapy-how-beat-shift/) for some of these effects by changing the baseline BABIP to which they are compared. This might take care of the major underlying biases, but other effects like the opposing pitcher or certain elements of the batter's profile may introduce further hidden effects. Tom Tango [addresses](http://tangotiger.com/index.php/site/comments/statcast-lab-why-are-clubs-shifting-rhh#1) this problem by using a WOWY analysis which looks at batter, fielding team, pitcher matchups and comes to the common conclusion that shifting against RHH is pointless and even detrimental. I think this is currently the best way to approach this problem since it controls for major factors and includes more players by not needing any minimum PA requirements. 
@@ -49,13 +50,13 @@ $$ effect = \frac{\sum_m w_m(wOBA_m^{shift} -wOBA_m^{non-shift})}{\sum_m w_m}$$
 
 Following this methodology we see a -56 point effect for LHH and +38 point effect for RHH which, based on the overall usage of the shift, results in just an 8 point advantage for fielding teams. As Tom points out, why are teams still shifting against RHH? Since our sample is such a small fraction of the PA in 2021 we probably have pretty big error bars on this estimate. I resampled the 2021 season 1000 times and re-ran the WOWY estimate to get a distributional estimate of these effects.
 
-<img src="/assets/img/ab-testing-the-shift/wowy_000_uncertainty.png" width="80%" and height="80%" class="center">
+<img src="/assets/img/ab-testing-the-shift/wowy_000_uncertainty.png" width="80%" height="80%" class="center" alt="WOWY shift effect point estimates for LHH and RHH based on 2021 sample">
 
 We can make some adjustments to try to boost the sample size. Another approach is looking at all PA regardless of the base state which results in -28 points for LHH, +42 points for RHH, +4 points overall, and tighter distributions[^2] with triple the sample size.
 
 [^2]: I am quoting the point estimates. Distributions have slightly different mean estimates due to randomness.
 
-<img src="/assets/img/ab-testing-the-shift/wowy_uncertainty.png" width="80%" and height="80%" class="center">
+<img src="/assets/img/ab-testing-the-shift/wowy_uncertainty.png" width="80%" height="80%" class="center" alt="Distribution of WOWY shift effect estimates from 1000 bootstrap resamples of the 2021 season">
 
 I have a few concerns using PA with men on base to estimate shifting effects on offense. We may not be capturing positioning advantages or disadvantages for creating outs with the runners already on base. Do they often take extra bases with the shift on? Are teams more likely to turn double plays? Do fielders position themselves a bit differenty? One way to fix this is just look at _actual_ change in run expectancy ([RE24](https://library.fangraphs.com/misc/re24/)) with and without the shift for these same PA. Scaling the wOBA effects to runs (divide by ~1.25) we would expect -.022 RE24 for LHH and 0.034 for RHH if there are no other base state effects. 
 
@@ -74,7 +75,7 @@ I have a few concerns using PA with men on base to estimate shifting effects on 
 LHH effects are right inline, but on RHH we see a pretty big difference of 0.02 runs based on the actual change in run expectancy of those PA. Overall, the RE24 estimate tells us that the shift is worth around 1.1 win per year (given ~12 shifts a game), which could be 3 wins had teams stayed away from shifting RHH. Here is a more complete picture of the last four seasons shift effects and associated uncertainty (90% CI). In order to utilize more PA and reduce the uncertainty in my estimates, I turned to propensity scores. 
 
 <a name="wowy"></a>
-<img src="/assets/img/ab-testing-the-shift/wowy_runexp_years.png" width="80%" and height="80%" class="center">
+<img src="/assets/img/ab-testing-the-shift/wowy_runexp_years.png" width="80%" height="80%" class="center" alt="WOWY run expectancy shift effect by year for LHH and RHH">
 
 
 
@@ -122,7 +123,7 @@ I'll get to how I estimated propensity scores in a bit, but first I wanted to de
 
 <a name="distribution"></a>
 
-<img src="/assets/img/ab-testing-the-shift/propensity_distribution.png" width="90%" and height="90%" class="center">
+<img src="/assets/img/ab-testing-the-shift/propensity_distribution.png" width="90%" height="90%" class="center" alt="Distribution of propensity scores for shifted vs non-shifted plate appearances">
 
 
 ### Estimating Propensity Scores
@@ -146,7 +147,7 @@ In addition to projected batted ball tendencies and outcomes for batters, I incl
 
 Given our estimated propensity scores, we can compare shifted and non-shifted groups that are close in propensity score to get an idea of shift effectiveness. Comparing the two groups across deciles in the figure below we can see the clear downsides of shifting RHH and evidence of a slight advantage for LHH. 
 
-<img src="/assets/img/ab-testing-the-shift/woba_propensity_deciles.png" width="90%" and height="90%" class="center">
+<img src="/assets/img/ab-testing-the-shift/woba_propensity_deciles.png" width="90%" height="90%" class="center" alt="wOBA comparison between shifted and non-shifted groups by propensity score decile">
 
 Compared to WOWY the ATT for bases empty in 2021 indicates similar shift effects for RHH at +38 points of wOBA and more muted LHH effects at -22 points. I produced the same RE24 scaled table as in the WOWY section, but this time using ATT.
 
@@ -172,7 +173,7 @@ Higher variance in our estimate of ATT can arise when we have shifted and non-sh
 
 [^4]: Standard deviation of ATT in 2021 is 0.0042 RE24/PA vs 0.0135 for WOWY
 
-<img src="/assets/img/ab-testing-the-shift/att_runexp_years.png" width="90%" and height="90%" class="center">
+<img src="/assets/img/ab-testing-the-shift/att_runexp_years.png" width="90%" height="90%" class="center" alt="ATT run expectancy shift effect estimate by year for LHH and RHH">
 
 With larger samples, the causal approach also allows us to do some more granular analysis. For example, we can look at shift effects on different PA outcomes. Unsurprisingly, with the shift, LHH single about 20% less (2.6 percentage points), but at the same time, field outs barely move! Most of the outcomes are funneled to strikeouts (20% increase), HR (13 % increase), and walks (22% increase). Shifting on RHH gives negligible advantages to the fielding team on singles and field outs while decreasing strikeouts and increasing walks and HR. 
 
@@ -268,44 +269,44 @@ We can also evaluate team shifting skills and decisions by looking at team speci
 </div>
 <div class="imgrow" style="background: #f0f0f0">
   <div class="imgcolumn">
-    <img src="/assets/img/ab-testing-the-shift/lhh_team_effect.png"  width="100%" height="110%">
+    <img src="/assets/img/ab-testing-the-shift/lhh_team_effect.png" width="100%" height="110%" alt="Team-level shift effect estimates for left-handed hitters">
   </div>
   <div class="imgcolumn">
-    <img src="/assets/img/ab-testing-the-shift/overall_team_effect.png" width="100%" and height="100%">
+    <img src="/assets/img/ab-testing-the-shift/overall_team_effect.png" width="100%" height="100%" alt="Overall team-level shift effect estimates">
   </div>
   <div class="imgcolumn">
-    <img src="/assets/img/ab-testing-the-shift/rhh_team_effect.png" width="100%" and height="100%">
+    <img src="/assets/img/ab-testing-the-shift/rhh_team_effect.png" width="100%" height="100%" alt="Team-level shift effect estimates for right-handed hitters">
   </div>
 </div>
 
 Which teams have generally improved or declined over the past 4 seasons? 
 
-<img src="/assets/img/ab-testing-the-shift/improved_shifting.png" width="80%" and height="80%" class="center">
+<img src="/assets/img/ab-testing-the-shift/improved_shifting.png" width="80%" height="80%" class="center" alt="Teams that have improved their shift effectiveness over the past four seasons">
 
-<img src="/assets/img/ab-testing-the-shift/deteriorating_shifting.png" width="80%" and height="80%" class="center">
+<img src="/assets/img/ab-testing-the-shift/deteriorating_shifting.png" width="80%" height="80%" class="center" alt="Teams with deteriorating shift effectiveness over the past four seasons">
 
 I also wanted to see if the so-called "smart teams" are actually benefiting from their strategies.  Astros seem like they consistently make good decisions while LAD is surprisingly the opposite.
 
-<img src="/assets/img/ab-testing-the-shift/smart_teams.png" width="80%" and height="80%" class="center">
+<img src="/assets/img/ab-testing-the-shift/smart_teams.png" width="80%" height="80%" class="center" alt="Shift effectiveness for analytically advanced teams including the Astros and Dodgers">
 
 
 What really matters is does this help teams win? The shift, as it is applied on a league level, hasn't been beneficial. On a team level over the past four years most teams' 90% confidence intervals overlap 0 so we can't make very definitive conclusions, but we can get a sense of who applies the shift well and often.  
 
-<img src="/assets/img/ab-testing-the-shift/wins_added_162.png" width="70%" and height="70%" class="center">
+<img src="/assets/img/ab-testing-the-shift/wins_added_162.png" width="70%" height="70%" class="center" alt="Estimated wins added from shifting per 162 games by team over the past four seasons">
 
 And here are the shifting wins by teams so far in 2021: 
 
-<img src="/assets/img/ab-testing-the-shift/wins_added.png" width="70%" and height="70%" class="center">
+<img src="/assets/img/ab-testing-the-shift/wins_added.png" width="70%" height="70%" class="center" alt="Estimated wins added from shifting by team in 2021">
 
 
 Finally, regardless of the methodology, we all come up with the same conclusion: shifts against RHH usually negate any benefits from shifts against LHH. 
 
-<img src="/assets/img/ab-testing-the-shift/why_shifting_rhh.png" width="80%" and height="80%" class="center">
+<img src="/assets/img/ab-testing-the-shift/why_shifting_rhh.png" width="80%" height="80%" class="center" alt="Summary showing why shifting against RHH negates the benefits gained from shifting against LHH">
 
 On average, shifting RHH is detrimental and there isn't even convincing evidence that a small dose of RHH shifts would be an advantage either. With the exception of a few teams, the MLB as a whole has not had much success consistently shifting RHH in 2018-2021 seasons. Maybe there is some finer analysis to be done on specific hitters, maybe some teams have figured out the secret, and maybe teams should be running their own A/B tests or multi-arm bandits....but most teams can save themselves the headache by sticking to LHH. 
 
 
-<img src="/assets/img/ab-testing-the-shift/rhh_shift_effectiveness.png" width="80%" and height="80%" class="center">
+<img src="/assets/img/ab-testing-the-shift/rhh_shift_effectiveness.png" width="80%" height="80%" class="center" alt="Shift effectiveness against right-handed hitters by team">
 
 
 
