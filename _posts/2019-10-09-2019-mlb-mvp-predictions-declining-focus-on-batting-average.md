@@ -26,11 +26,6 @@ There are two primary changes we learned from voters in 2018: wins above replace
 
 ![ba_dive](/assets/img/2019-mlb-mvp-predictions-declining-focus-on-batting-average/ba_dive-768x498.png)
 
-<!-- {{% include image.html
-            img="/assets/img/2019-mlb-mvp-predictions-declining-focus-on-batting-average/ba_dive-768x498.png"
-            title="title for image"
-            caption="caption for image" %}} -->
-            
 Even though the winners in the NL and AL had high batting averages (Yelich at .326 and Betts at .348), they had other things going for them. It wasn't their sole differentiator. The key reason I think the weights finally changed was the distinction between 3rd place Jose Ramirez and 4th place J.D. Martinez. Martinez beat out or tied Ramirez in almost every category (R, RBI, HR, AVG, OBP, Win %). Their WAR values were not drastically close (7.95[^2] for Ramirez and 6.15 for Martinez), but close enough to have a discussion. Ramirez had a .270 AVG, 60 points lower than Martinez's at .330!
 
 [^2]: Avg of fWAR and bWAR
