@@ -1,0 +1,49 @@
+---
+layout: page
+title: Research
+subtitle: Papers, articles, and the code behind the blog.
+permalink: /research/
+wide: true
+---
+<section aria-labelledby="papers-title">
+  <div class="block-head">
+    <h2 id="papers-title">Papers</h2>
+    <a class="mono" href="{{ site.scholar-url }}">Google Scholar ↗</a>
+  </div>
+  {% include research.html %}
+</section>
+
+<section class="research-projects" aria-labelledby="projects-title">
+  <div class="block-head">
+    <h2 id="projects-title">Projects on this blog</h2>
+    <a class="mono" href="https://github.com/{{ site.github-username }}">GitHub ↗</a>
+  </div>
+  <div class="projects">
+    {%- for proj in site.data.research.projects %}
+    <div class="project">
+      <div>
+        {%- if proj.posts.size == 1 %}
+        {%- assign p = site.posts | where: "url", proj.posts[0] | first %}
+        <h3><a class="t" href="{{ p.url | default: proj.posts[0] | relative_url }}">{{ proj.title }}</a></h3>
+        {%- else %}
+        <h3 class="t">{{ proj.title }}</h3>
+        {%- endif %}
+        <p class="d">{{ proj.description }}</p>
+        {%- if proj.posts.size > 1 %}
+        <ul class="posts">
+          {%- for url in proj.posts %}
+          {%- assign p = site.posts | where: "url", url | first %}
+          {%- if p %}
+          <li><span class="mono">{{ p.date | date: "%Y" }}</span><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+          {%- endif %}
+          {%- endfor %}
+        </ul>
+        {%- endif %}
+      </div>
+      {%- if proj.code %}
+      <div class="links"><a class="pill" href="{{ proj.code }}">code</a></div>
+      {%- endif %}
+    </div>
+    {%- endfor %}
+  </div>
+</section>

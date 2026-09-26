@@ -1,0 +1,29 @@
+---
+layout: base
+title: About
+permalink: /aboutme/
+share-description: Sam Sharpe is a Staff Engineer in Applied AI Research at Capital One who writes long-form analyses of baseball and the occasional question about nothing in particular.
+---
+<div class="page-head">
+  <div class="wrap">
+    <h1>About</h1>
+  </div>
+</div>
+
+<div class="about-page wrap">
+  <div class="about">
+    <img src="{{ site.avatar | relative_url }}" alt="Sam Sharpe" width="200" height="200">
+    <div>
+      <p class="role">{{ site.role }}, building foundation models for customer behavior.</p>
+      <p>Before that I built metrics for Statcast at MLB. Here I write long-form analyses of baseball and the occasional question about nothing in particular.</p>
+      <p>I'm a Yankees fan living in Cambridge, MA with my Red Sox loving wife. As long as there is baseball data, I will never be bored.</p>
+      <div class="contact">
+        {%- for link in site.social-links %}{% unless link.title == "RSS" %}
+        <a class="pill" href="{{ link.url | relative_url }}">{{ link.title }}</a>
+        {%- endunless %}{% endfor %}
+        <a class="pill" href="{{ '/Resume' | relative_url }}">Resume</a>
+        <a class="pill" href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </div>
+    </div>
+  </div>
+</div>

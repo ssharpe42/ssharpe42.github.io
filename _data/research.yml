@@ -1,0 +1,103 @@
+# Research shown on the homepage and on /research/.
+# In `authors`, wrap the owner's name in ** ** to bold it.
+
+papers:
+  - year: 2022
+    title: "BASED-XAI: Breaking Ablation Studies Down for Explainable Artificial Intelligence"
+    authors: "Isha Hameed, **Samuel Sharpe**, Daniel Barcklow, Justin Au-Yeung, Sahil Verma, Jocelyn Huang, Brian Barr, C. Bayan Bruss"
+    venue: "KDD 2022 · Workshop on Machine Learning in Finance"
+    links:
+      - label: paper
+        url: https://arxiv.org/abs/2207.05566
+
+  - year: 2021
+    title: "Dynamic Customer Embeddings for Financial Service Applications"
+    authors: "Nima Chitsazan, **Samuel Sharpe**, Dwipam Katariya, Qianyu Cheng, Karthik Rajasethupathy"
+    venue: "ICML 2021 · Workshop on Representation Learning for Finance and e-Commerce Applications"
+    links:
+      - label: paper
+        url: https://arxiv.org/abs/2106.11880
+
+  - year: 2020
+    title: "Latent-CF: A Simple Baseline for Reverse Counterfactual Explanations"
+    authors: "Rachana Balasubramanian, **Sam Sharpe**, Brian Barr, C. Bayan Bruss"
+    venue: "NeurIPS 2020 · Workshop on Fair AI in Finance"
+    links:
+      - label: paper
+        url: https://arxiv.org/abs/2012.09301
+
+  - year: 2019
+    title: "Visual Natural Language Query Auto-Completion for Estimating Instance Probabilities"
+    authors: "**Samuel Sharpe**, Jin Yan, Fan Wu, Iddo Drori"
+    venue: "CVPR 2019 · Language and Vision Workshop"
+    links:
+      - label: paper
+        url: https://arxiv.org/abs/1910.04887
+      - label: code
+        url: https://github.com/ssharpe42/VNLQAC
+
+articles:
+  - publisher: Capital One Tech
+    title: "Dynamic Customer Embeddings & Understanding Customer Intent"
+    url: https://www.capitalone.com/tech/machine-learning/dynamic-customer-embeddings-sequential-recommendation-representation-learning/
+    description: "How sequential recommendation and representation learning can be leveraged to model customer behavior."
+
+  - publisher: Capital One Tech
+    title: "Machine Learning for Temporal Data in Finance"
+    url: https://www.capitalone.com/tech/machine-learning/machine-learning-for-temporal-data-in-finance/
+    description: "How machine learning methods are evolving to address the complex temporal and sequential elements of consumer financial data."
+
+  - publisher: MLB Technology
+    title: "MLB Pitch Classification"
+    url: https://technology.mlblogs.com/mlb-pitch-classification-64a1e32ee079
+    description: "A deep dive into recent enhancements of MLB's pitch classification system."
+
+  - publisher: MLB Technology
+    title: "An Introduction to Expected Weighted On-Base Average (xwOBA)"
+    url: https://technology.mlblogs.com/an-introduction-to-expected-weighted-on-base-average-xwoba-29d6070ba52b
+    description: "An introduction to new baseball metrics derived from tracking data."
+
+# Blog projects with code (from the old Projects page). `posts` are blog post URLs.
+projects:
+  - title: "Injuries in Baseball: How (Self-)Exciting?"
+    description: "Modeling MLB player injury risk with self-exciting temporal point processes."
+    code: https://github.com/ssharpe42/mlb-injury
+    posts:
+      - /mlb-injury-point-process/
+
+  - title: "A/B Testing the Shift"
+    description: "Analyzing the effectiveness of the shift through propensity scores."
+    posts:
+      - /ab-testing-the-shift/
+
+  - title: "MVP Voter Model"
+    description: "MVP vote prediction model using a fused lasso formulated with a linear programming objective and constraints."
+    code: https://github.com/ssharpe42/MLB_MVPVoting
+    posts:
+      - /2019-mlb-mvp-predictions-declining-focus-on-batting-average/
+      - /all-betts-are-on-yelich/
+      - /thinking-like-an-mlb-mvp-voter/
+
+  - title: "Making Baseball Slow Again"
+    description: "Analysis of the slowing pace of play in MLB."
+    code: https://github.com/ssharpe42/PaceofPlay
+    posts:
+      - /making-baseball-slow-again/
+
+  - title: "Who Are the Best Romcom Actors?"
+    description: "Applying Regularized Adjusted Plus Minus (RAPM) to rate actors based on IMDb ratings."
+    code: https://github.com/ssharpe42/RomComPlusMinus
+    posts:
+      - /who-are-the-best-romcom-actors/
+
+  - title: "Stealing Bases and Splitting the Rewards"
+    description: "Pitch-adjusted Swipe Rate Above Average: a mixed model that estimates pitcher, catcher, and runner stolen base skills."
+    code: https://github.com/ssharpe42/pSRAA
+    posts:
+      - /stealing-bases-and-splitting-the-rewards/
+
+  - title: "Profiting Off the Nationals Presidents Race Puppet Masters"
+    description: "How to bet on the Presidents Race and make money using decision trees."
+    code: https://github.com/ssharpe42/PresidentRace
+    posts:
+      - /profiting-off-the-nationals-presidents-race-puppet-masters/
