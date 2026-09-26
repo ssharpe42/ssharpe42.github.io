@@ -1,6 +1,22 @@
 ---
 layout: base
 ---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ site.author | jsonify }},
+  "jobTitle": "Staff Engineer, Applied AI Research",
+  "worksFor": { "@type": "Organization", "name": "Capital One" },
+  "url": {{ site.url | jsonify }},
+  "image": {{ site.avatar | absolute_url | jsonify }},
+  "sameAs": [
+    "https://github.com/ssharpe42",
+    "https://www.linkedin.com/in/samuelsharpe/",
+    {{ site.scholar-url | jsonify }}
+  ]
+}
+</script>
 <div class="hero">
   <div class="wrap">
     <div class="hero-text">
