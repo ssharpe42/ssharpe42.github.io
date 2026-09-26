@@ -1,0 +1,35 @@
+{%- comment -%}
+  Featured post card. Params: post, lead (true/false)
+{%- endcomment -%}
+{%- assign p = include.post -%}
+{%- capture thumb -%}
+{%- if p.thumbnail-img -%}{{ p.thumbnail-img }}
+{%- elsif p.cover-img -%}{%- if p.cover-img.first -%}{{ p.cover-img[0].first.first }}{%- else -%}{{ p.cover-img }}{%- endif -%}
+{%- endif -%}
+{%- endcapture -%}
+{%- assign thumb = thumb | strip -%}
+{%- capture dek -%}
+{%- if p.subtitle -%}{{ p.subtitle | strip_html }}
+{%- elsif p.share-description -%}{{ p.share-description | strip_html }}
+{%- else -%}{{ p.excerpt | strip_html | normalize_whitespace | truncatewords: 40 }}
+{%- endif -%}
+{%- endcapture -%}
+{%- assign dek = dek | strip -%}
+<a class="card{% if include.lead %} lead{% endif %}" href="{{ p.url | relative_url }}">
+  {%- if thumb != "" %}
+  <div class="img"><img src="{{ thumb | relative_url }}" alt="{{ p.card-img-alt | default: '' | escape }}"{% unless include.lead %} loading="lazy"{% endunless %}></div>
+  {%- endif %}
+  <div class="meta mono"><span>{{ p.date | date: "%b %-d, %Y" }}</span><span aria-hidden="true">·</span><span>{% include readtime.html content=p.content %} min read</span></div>
+  <h3>{{ p.title }}</h3>
+  {%- if include.lead and dek != "" %}
+  <p class="dek">{{ dek }}</p>
+  {%- endif %}
+  {%- if p.card-stats %}
+  <div class="statline mono">
+    {%- for s in p.card-stats -%}
+    {%- assign parts = s | split: "|" -%}
+    {%- if parts.size > 1 %}<span>{{ parts[0] | strip }} <b>{{ parts[1] | strip }}</b></span>{% else %}<span>{{ s }}</span>{% endif -%}
+    {%- endfor %}
+  </div>
+  {%- endif %}
+</a>

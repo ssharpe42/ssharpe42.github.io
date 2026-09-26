@@ -1,15 +1,13 @@
-<!-- _includes/image.html -->
-<div class="image-wrapper">
-    {% if include.url %}
-    <a href="{{ include.url }}" title="{{ include.title }}" target="_blank" width="{{ include.width }}" and
-        height="{{ include.height }}" alt="{{ include.alt }}">
-        {% endif %}
-        <img src="{{ site.url }}/{{ include.img }}" alt="{{ include.title }}" width="{{ include.width }}" and
-            height="{{ include.height }}" alt="{{ include.alt }}"/>
-        {% if include.url %}
-    </a>
-    {% endif %}
-    {% if include.caption %}
-    <p class="image-caption">{{ include.caption }}</p>
-    {% endif %}
-</div>
+{%- comment -%}
+  Figure with optional caption and link.
+  Params: img (required), alt, caption, title (tooltip on the link), url, width, height
+{%- endcomment -%}
+{%- capture img_alt -%}{{ include.alt | default: include.caption | default: include.title | strip_html | strip }}{%- endcapture -%}
+<figure>
+  {%- if include.url %}<a href="{{ include.url }}"{% if include.title %} title="{{ include.title | escape }}"{% endif %}>{% endif %}
+  <img src="{{ include.img | relative_url }}" alt="{{ img_alt | escape }}"{% if include.width %} width="{{ include.width }}"{% endif %}{% if include.height %} height="{{ include.height }}"{% endif %} loading="lazy">
+  {%- if include.url %}</a>{% endif %}
+  {%- if include.caption %}
+  <figcaption>{{ include.caption }}</figcaption>
+  {%- endif %}
+</figure>

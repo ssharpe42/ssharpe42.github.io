@@ -1,0 +1,31 @@
+{%- comment -%}
+  Filterable table of all posts.
+  Params: filter (all | baseball | nothing), heading (optional h2 text), id (optional section id)
+{%- endcomment -%}
+{%- assign wl_filter = include.filter | default: "all" -%}
+<div class="block-head">
+  {%- if include.heading %}
+  <h2{% if include.id %} id="{{ include.id }}-title"{% endif %}>{{ include.heading }}</h2>
+  {%- else %}
+  <h2 class="visually-hidden">Posts</h2>
+  {%- endif %}
+  <div class="filters" role="group" aria-label="Filter posts by category">
+    <button type="button" data-filter="all" aria-pressed="{% if wl_filter == 'all' %}true{% else %}false{% endif %}">All</button>
+    {%- for cat in site.category-labels %}
+    <button type="button" data-filter="{{ cat[0] }}" aria-pressed="{% if wl_filter == cat[0] %}true{% else %}false{% endif %}">{{ cat[1] }}</button>
+    {%- endfor %}
+  </div>
+</div>
+<table class="log" data-log>
+  <tbody>
+    {%- for post in site.posts %}
+    {%- assign cat = post.categories | first | default: "baseball" %}
+    <tr data-cat="{{ cat }}"{% if wl_filter != "all" and wl_filter != cat %} hidden{% endif %}>
+      <td class="d mono"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time></td>
+      <td><a href="{{ post.url | relative_url }}">{{ post.title }}</a></td>
+      <td class="c mono">{{ site.category-labels[cat] | default: cat }}</td>
+      <td class="r mono">{% include readtime.html content=post.content %} min</td>
+    </tr>
+    {%- endfor %}
+  </tbody>
+</table>

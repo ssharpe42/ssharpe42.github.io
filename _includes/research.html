@@ -1,0 +1,30 @@
+{%- comment -%}
+  Papers + "Writing elsewhere" from _data/research.yml.
+  Params: heading_level (default 3) for paper titles.
+{%- endcomment -%}
+<div class="papers">
+  {%- for paper in site.data.research.papers %}
+  <div class="paper">
+    <span class="yr mono">{{ paper.year }}</span>
+    <div>
+      <h3>{{ paper.title }}</h3>
+      <p class="authors">{{ paper.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+      <p class="venue mono">{{ paper.venue }}</p>
+    </div>
+    <div class="links">
+      {%- for link in paper.links %}<a class="pill" href="{{ link.url }}">{{ link.label }}</a>{% endfor -%}
+    </div>
+  </div>
+  {%- endfor %}
+</div>
+
+<h3 class="label sub-head">Writing elsewhere</h3>
+<div class="articles">
+  {%- for a in site.data.research.articles %}
+  <a href="{{ a.url }}">
+    <span class="label">{{ a.publisher }}</span>
+    <span class="t">{{ a.title | escape }}</span>
+    <span class="d">{{ a.description | escape }}</span>
+  </a>
+  {%- endfor %}
+</div>
