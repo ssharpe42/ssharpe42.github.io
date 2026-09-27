@@ -2,6 +2,30 @@
 # In `authors`, wrap the owner's name in ** ** to bold it.
 
 papers:
+  - year: 2026
+    title: "Dynamic Tokenization via Reinforcement Patching: End-to-end Training and Zero-shot Transfer"
+    authors: "Yulun Wu, Sravan Kumar Ankireddy, **Samuel Sharpe**, Nikita Seleznev, Dehao Yuan, Hyeji Kim, Nam H. Nguyen"
+    venue: "NeurIPS 2026"
+    links:
+      - label: paper
+        url: https://arxiv.org/abs/2603.26097
+
+  - year: 2025
+    title: "Understanding the Effect of using Semantically Meaningful Tokens for Visual Representation Learning"
+    authors: "Neha Kalibhat, Priyatham Kattakinda, Sumit Nawathe, Arman Zarei, Nikita Seleznev, **Samuel Sharpe**, Senthil Kumar, Soheil Feizi"
+    venue: "CVPR 2025 · Workshops"
+    links:
+      - label: paper
+        url: https://arxiv.org/abs/2405.16401
+
+  - year: 2023
+    title: "Adapting Self-Supervised Representations to Multi-Domain Setups"
+    authors: "Neha Kalibhat, **Sam Sharpe**, Jeremy Goodsitt, Bayan Bruss, Soheil Feizi"
+    venue: "BMVC 2023"
+    links:
+      - label: paper
+        url: https://arxiv.org/abs/2309.03999
+
   - year: 2022
     title: "BASED-XAI: Breaking Ablation Studies Down for Explainable Artificial Intelligence"
     authors: "Isha Hameed, **Samuel Sharpe**, Daniel Barcklow, Justin Au-Yeung, Sahil Verma, Jocelyn Huang, Brian Barr, C. Bayan Bruss"
