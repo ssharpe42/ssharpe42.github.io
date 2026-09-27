@@ -18,6 +18,14 @@ papers:
       - label: paper
         url: https://arxiv.org/abs/2405.16401
 
+  - year: 2024
+    title: "A Simple Baseline for Predicting Events with Auto-Regressive Tabular Transformers"
+    authors: "Alex Stein, **Samuel Sharpe**, Doron Bergman, Senthil Kumar, C. Bayan Bruss, John Dickerson, Tom Goldstein, Micah Goldblum"
+    venue: "Preprint · arXiv"
+    links:
+      - label: paper
+        url: https://arxiv.org/abs/2410.10648
+
   - year: 2023
     title: "Adapting Self-Supervised Representations to Multi-Domain Setups"
     authors: "Neha Kalibhat, **Sam Sharpe**, Jeremy Goodsitt, Bayan Bruss, Soheil Feizi"
