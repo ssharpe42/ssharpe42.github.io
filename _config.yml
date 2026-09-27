@@ -31,10 +31,6 @@ nav-links:
     url: /research/
   - title: About
     url: /aboutme/
-    hide-sm: true
-  - title: Resume
-    url: /Resume
-    hide-sm: true
 
 # --- Footer links (email is added from `email` above) --- #
 social-links:
