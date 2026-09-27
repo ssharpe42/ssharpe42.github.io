@@ -397,3 +397,4 @@ table.dt td.sorting_1 { color: var(--ink); background: color-mix(in srgb, var(--
   .topbar, .site-footer, .toc, .share, .nextprev { display: none !important; }
   body { background: #fff; color: #000; }
 }
+.see-all { margin-top: 16px; }

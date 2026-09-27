@@ -1,9 +1,10 @@
 {%- comment -%}
   Papers + "Writing elsewhere" from _data/research.yml.
-  Params: heading_level (default 3) for paper titles.
+  Params: limit (optional) shows only the N most recent papers, with a link to the full list.
 {%- endcomment -%}
+{%- assign paper_limit = include.limit | default: site.data.research.papers.size -%}
 <div class="papers">
-  {%- for paper in site.data.research.papers %}
+  {%- for paper in site.data.research.papers limit: paper_limit %}
   <div class="paper">
     <span class="yr mono">{{ paper.year }}</span>
     <div>
@@ -17,6 +18,9 @@
   </div>
   {%- endfor %}
 </div>
+{%- if paper_limit < site.data.research.papers.size %}
+<p class="see-all mono"><a href="{{ '/research/' | relative_url }}">See all {{ site.data.research.papers.size }} papers →</a></p>
+{%- endif %}
 
 <h3 class="label sub-head">Writing elsewhere</h3>
 <div class="articles">
